@@ -25,6 +25,12 @@ vector<int> dijkstra(int V, vector<vector<pii>>& adj, int source) {
             }
         }
     }
+vector<int> path;
+    int current = node;
+    while (current != -1) {
+        path.push_back(current);
+        current = parent[current];
+    }
 
-    return dist;
+    return path;
 }
